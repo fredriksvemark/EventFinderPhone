@@ -1,0 +1,1 @@
+/Users/iths/html/gitHtml/event/EventPhone/EventFinder/src/client/app/carousel.pipe.spec.ts

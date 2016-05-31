@@ -1,0 +1,1 @@
+{"version":3,"file":"my-users.service.js","sourceRoot":"","sources":["my-users.service.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;YAGA;gBAEE;gBAAe,CAAC;gBAHlB;oBAAC,iBAAU,EAAE;;kCAAA;gBAKb,qBAAC;YAAD,CAAC,AAJD,IAIC;YAJD,2CAIC,CAAA","sourcesContent":["import {Injectable} from 'angular2/core';\n\n@Injectable()\nexport class MyUsersService {\n\n  constructor() {}\n\n}\n"]}

@@ -1,0 +1,173 @@
+Testplan Megaprojektet - Grupp 1 - EventFinder 
+1 Identifierare 
+Planen avser Eventfinder nativerelease 1.0.
+Planen täcker hela testningen av Eventfinder fram till nativerelease 1.0 för iPhone och Android.
+
+2 Referenser
+	* Evenemangshanterare - Kravspecifikation och projektunderlag
+	* ?
+	
+3 Introduktion
+EventFinder är en site för att tipsa om event. Arrangörerna lägger upp ett event med bilder och information, användarna kan se när eventen infaller, se detaljerad information om dem, och lägga upp egna bilder därifrån. 
+En tidigare release av EventFinder är släppt som webapp, och nativeprojeket är tänkt att konvertera befintlig kod till nativeplattformar mha paketeringsramverket PhoneGap.
+Testningen avser omformningen av webapplikationen till mobilapp  men viss testning av funktionaliteten i webapplikationskoden kommer också att utföras. 
+Denna plan täcker sprint 1 av nativereleasen för EventFinder-appen, som kommer att släppas för iOS och Android. TODO: VILKA VERSIONER???
+Sprint 1 pågår under två veckor och har en budget på 11 personer, 7 utvecklare och 4 testare, med samtliga resurser på deltid. Ekonomisk budget saknas.
+
+4 Testobjekt
+Testobjekten är webapplikationen, androidapplikationen och iPhoneapplikationen av EventFinder. 
+		
+5 Risker	
+
+	Projektrisker:
+		Applikationsrisker:
+			* Uppgradering: Teamet kommer att uppgradera från Angular1 till Angular2. Detta innebär en risk för förseningar.
+			Hanteras genom att påbörja detta arbete tidigt i sprinten. Det finns också möjlighet till viss coachning av teamet.
+			Risknivå: Medium
+			Impact: Hög
+			
+			* Nya verktyg: Teamet har ingen tidigare erfarenhet av att konvertera applikationer mha PhoneGap och det riskerar att försena arbetet.
+			Hanteras genom att påbörja arbetet tidigt i sprinten. Det finns också möjlighet till viss coachning av teamet.
+			Risknivå: Medium
+			Impact: Hög
+			
+			* Kodförändringar: Risk att ändringar i koden kommer att skapa regressionsproblem.	
+			Hanteras genom att minska scope på leveransen.
+			Risknivå: Låg
+			Impact: Medium
+
+			* Ingen nativerelease: Projektet når inte releasemålet att leverera en nativeapp som körs på hårdvaruplattformarna.
+		Hanteras genom att köra bulken av testningen i simulator (Chrome) i första sprinten och eventuellt senare.
+			Risk: medium
+			Impact: hög
+			
+		Resursrisker:
+			* Utvecklarresurser: Utvecklarresurserna minskar oväntat	
+			Hanteras genom att releasen blir mindre än planerat.
+			Risknivå: Hög
+			Impact medium
+
+			* Testresurser: Testresurserna minskar oväntat	
+			Hanteras genom att ta fram ett charter för utforskande testning tidigt i arbetet, och om nödvändigt fokusera tillgängliga timmar på det.
+			Risknivå: Hög
+			Impact: Medium
+					
+		Testningsrisker:		
+			* Hårdvara ej tillgänglig: Fysiska telefoner ej tillgängliga.
+			Hanteras genom att tidigt i projektet tillse att tänkt hårdvara finns tillgänglig. 
+			Risknivå: Låg 
+			Impact: Hög
+
+		Kvalitetsrisker: 
+			* Koddefekter: Risken att defekter i koden hittas under test och begränsar nyutveckling.
+			Hanteras genom att minska scope på leveransen.
+			Risknivå: Medium
+			Impact: Medium
+	
+			* Validering: Risken att teamet utvecklar funktioner kunden inte har behov av.
+			Hanteras med en kort sprint innan första demo, och genom att en första release av funktionaliteten redan är släppt och godkänd av beställaren.
+			
+		Övriga risker:
+			Inga risker för personskada föreligger.
+			Inga integritetsrisker föreligger.
+			Inga risker för ekonomisk skada föreligger.
+			Inga risker för att bryta mot offentliga regler föreligger.
+			
+6 Funktioner i apparna
+Den funktionalitet som ska testas är 
+		* Att visa event för användare
+		* Inloggning för arrangörer
+		* Ändring av befintligt event
+		* Skapande av nytt event
+
+7 Funktionalitet som inte ska testas
+All funktionalitet som levereras i releasen ska testas. Funktionalitet som riskerar att inte komma med i releasen är till exempel funktionen för att lägga upp foton från eventet i kommentarerna till eventet.
+
+8 Teststrategi
+För testning på de fysiska enheterna används ett test charter för utforskande test. 
+ 
+TODO: ????????????????????????????????
+	* Gherkin-definitioner
+	* Testkod, cucumber och e2e
+	* JAutomate-skript 
+
+9 Definition of Done - test
+Testningen anses avslutad när inga allvarliga funktionella fel (defekter klass 1) hittats under sprinten, när samtliga levererade funktioner testats och när samtliga hittade defekter loggats.
+Oaktat övriga kriterier anses testningen avslutad 2016-06-03 i samband med leverans och demo.
+
+10 Avbrotts- och återstartskriterier
+* Testningen kommer att avbrytas avseende enskilda 
+funktioner om allvarliga funktionella fel hittas i koden. Dessa kommer att rapporteras som defekter klass 1.
+* Testningen kommer att återstartas avseende defekter klass 1 när en åtgärd implementerats och enhetstestats för defekten.
+Testningen kommer inte att avbrytas om mindre allvarliga funktionella fel hittas. Dessa kommer att rapporteras som defekter klass 2.
+* Testningen kommer inte att avbrytas om kosmetiska fel upptäcks. Dessa kommer att rapporteras som defekter klass 3.
+* Testningen kommer inte att avbrytas om användbarhetsbrister hittas. Dessa kommer att rapporteras som defekter klass 3.
+
+11 Testleverabler
+Följande testleverabler är planerade:
+	* Testplan (denna dokument)
+	* Test charter, utforskande test 
+	* Gherkin-definitioner
+	* Testkod, cucumber och e2e
+	* JAutomate-skript 
+
+12 Kvarvarande testabete
+Inget testarbete kommer att kvarstå efter release.
+
+13 Omgivningskrav
+All testning av webapplikationen kommer att ske i webläsaren Chrome.
+All simulering av nativeplaformar kommer att ske i webläsaren Chrome.
+Testning på fysisk plattform kommer att ske med
+TODO: ????????????????????????????????
+	* iPhone 5
+	* Android 4.4
+
+14 Personal- och utbildningsbehov
+Testarna har fått en introduktion till befintlig applikation och Angulars testverktyg. 
+ 
+15 Ansvarsområden
+Produktägare för produkten är utvecklarnas lärare i Programutveckling IOS. 
+Kravställare på testarbetet är testarnas lärare i Agila metoder. 
+
+16 Tidplan
+Arbetet kommer att utföras i två sprintar, första sprint vecka 21, och andra sprint vecka 22 med release och officiell demo fredag 2016-06-03. 
+Utvecklings- och testscope kommer att anpassas till tidplanen, inga förseningar kommer således uppstå.
+TODO: CODEFREEZE??
+
+17 Planeringsrisker
+Planeringrisker hanteras i kapitel 5, Risker. 
+
+18 Godkännanden
+Denna testplan ska godkännas av: 
+[ ] Utvecklingsgruppen EventFinder
+ 
+19 Ordlista
+	* Allvarligt funktionellt fel:
+		Fel som stoppar användaren från att utföra uppgiften ifråga.
+	* Kosmetiskt fel: 
+		Fel som inte stoppar användaren från att utföra uppgiften, men som stör det estetiska intrycket av appen.
+	* Användbarhetsbrist:
+		Brist i användarupplevelsen av produkten, dock inte så allvarlig att den måste ses som en defekt.
+	* Defekt klass 1: se Allvarligt funktionellt fel.
+	* Defekt klass 2: Funktionellt fel där användaren får ett felaktigt resultat men inte hindras från att utföra uppgiften.
+	* Defekt klass 3: Se Kosmetiska fel och Användbarhetsbrist.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
